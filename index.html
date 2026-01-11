@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azim and Son - official web</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // যদি লগইন করা না থাকে, তবে তাকে লগইন পেজে পাঠিয়ে দাও
+        if (!localStorage.getItem('activeUser')) {
+            window.location.href = "login.html";
+        }
+    </script>
+</head>
+
+<body>
+
+
+
+    <!-- <header class="banner" style="padding: 0; position: relative; z-index: 100;">
+        <div class="banner-logo-wrapper" style="overflow: hidden;">
+            <img src="/IMAGE/azim logo.jpg" alt="Azim and Son Logo"
+                style="width: 100%; height: auto; display: block; object-fit: cover;">
+        </div>
+
+        <div class="menu-dots-container" style="position: absolute; top: 20px; right: 20px; z-index: 9999;">
+            <div class="dots-btn" onclick="toggleMenu()"
+                style="background: rgba(0,0,0,0.6); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: white; cursor: pointer; font-size: 24px;">
+                &#8942;
+            </div>
+
+            <div class="dropdown-menu" id="dotsMenu" style="
+            display: none; 
+            position: absolute; 
+            right: 0; 
+            top: 45px; 
+            background: white; 
+            color: black; 
+            min-width: 150px; 
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2); 
+            border-radius: 8px; 
+            overflow: hidden; 
+            z-index: 10000;">
+
+                <div onclick="showProfile()"
+                    style="padding: 12px; cursor: pointer; border-bottom: 1px solid #eee; transition: 0.3s;">👤 My
+                    Profile
+                </div>
+                <div onclick="showSettings()"
+                    style="padding: 12px; cursor: pointer; border-bottom: 1px solid #eee; transition: 0.3s;">⚙️ Settings
+                </div>
+                <div onclick="logout()"
+                    style="padding: 12px; cursor: pointer; color: #ff4d4d; font-weight: bold; transition: 0.3s;">🚪
+                    Logout
+                </div>
+            </div>
+        </div>
+    </header> -->
+
+    <header class="banner" style="padding: 0; overflow: hidden; position: relative;">
+        <div class="banner-logo-wrapper">
+            <img src="/IMAGE/azim logo.jpg" alt="Azim and Son Logo"
+                style="width: 100%; height: auto; display: block; object-fit: cover;">
+        </div>
+
+        <div class="menu-dots-container" style="position: absolute; top: 20px; right: 20px; z-index: 10;">
+            <div class="dots-btn" onclick="toggleMenu()"
+                style="background: rgba(0,0,0,0.5); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: white;">
+                &#8942;</div>
+            <div class="dropdown-menu" id="dotsMenu">
+                <div onclick="showProfile()">👤 My Profile</div>
+                <div onclick="showSettings()">⚙️ Settings</div>
+                <div onclick="logout()" style="color: #ff4d4d; font-weight: bold;">🚪 Logout</div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+    <nav>
+        <a href="buyer.html">BUYER-RECIPE</a>
+        <a href="/production.html/production.html">PRODUCTION REPORT</a>
+        <a href="/DELIVERY/delivery.html">DAILY CHALLAN</a>
+        <!-- <a href="#">MAIL</a> -->
+    </nav>
+
+
+
+
+
+
+
+
+    <section id="gallery">
+        <h2 class="section-title">Office Gallery</h2>
+        <div class="grid">
+            <div class="card">
+                <img src=" ">
+                <h3>Executive Suite</h3>
+                <p>Updated: 01/01/2026</p>
+            </div>
+            <div class="card">
+                <img src=" ">
+                <h3>IT Research Lab</h3>
+                <p>Advanced Infrastructure</p>
+            </div>
+            <div class="card">
+                <img src="">
+                <h3>Meeting Hall</h3>
+                <p>Strategic Discussions</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section id="staff">
+        <h2 class="section-title">Our Office Staff</h2>
+        <div class="grid">
+            <div class="card staff-card">
+                <img src="/IMAGE/zaman.jpg" class="staff-img">
+                <h3>MD ASADUZZAMAN</h3> <br>
+                <p style="color: var(--primary-color); font-weight: bold;">HEAD OF WASHING PLANT</p>
+            </div>
+            <div class="card staff-card">
+                <img src="/IMAGE/monir.jpg" class="staff-img">
+                <h3>MD MONIR</h3> <br>
+                <p style="color: var(--primary-color); font-weight: bold;">WASH MANAGER</p>
+            </div>
+            <!-- <div class="card staff-card">
+                    <img src="https://i.pravatar.cc/150?u=bayezid" class="staff-img">
+                    <h3>Bayezid Khan</h3>
+                    <p style="color: var(--primary-color); font-weight: bold;">Lead Engineer</p>
+                </div> -->
+        </div>
+    </section>
+
+
+
+    <section id="bio">
+        <div class="card" style="padding: 60px; text-align: center; background: var(--glass-bg); border: none;">
+            <h2 style="margin-bottom: 25px;">Aboout Azim And Son</h2>
+            <p style="line-height: 1.8; max-width: 800px; margin: auto; font-size: 1.1rem;">
+                Our garments factory is a reliable and experienced apparel manufacturing company, specializing mainly in
+                the production
+                of pants and jackets. Over the years, we have earned the trust of our clients through skilled
+                workmanship, integrity,
+                and consistent product quality.
+
+                We use modern machinery and a team of trained professionals to ensure that every product is manufactured
+                with precision
+                and care. We place the highest priority on product quality, timely delivery, and fair pricing, which
+                makes our service
+                highly competitive and customer-friendly.
+
+                Our primary goal is to meet both local and international market demands by ensuring proper design,
+                accurate sizing, and
+                excellent finishing. We strongly believe that quality work builds long-term partnerships and lasting
+                business
+                relationships.
+            </p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <footer style="text-align: center; padding: 40px; opacity: 0.7;">
+        &copy; 2026 Azim and Son Pvt. Ltd. | All Rights Reserved.
+    </footer>
+    </div>
+
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close-x" onclick="closeModal('profileModal')">✖</span>
+            <img id="pImg" src=""
+                style="width: 130px; height: 130px; border-radius: 50%; border: 4px solid var(--primary-color); object-fit: cover;">
+            <h2 id="pName" style="margin-top: 20px; letter-spacing: 1px;"></h2>
+            <p id="pID" style="opacity: 0.7; margin-bottom: 15px;"></p>
+            <div style="background: #e6fffa; color: #2d3748; padding: 10px; border-radius: 10px; font-size: 13px;">
+                Status: <span style="color: #38cb62; font-weight: bold;">● Online</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-x" onclick="closeModal('settingsModal')">✖</span>
+            <h3 style="margin-bottom: 25px;">Display Settings</h3>
+            <div class="setting-row">
+                <span>Dark Theme:</span>
+                <button class="btn-action" onclick="toggleDark()">Toggle Mode</button>
+            </div>
+            <div class="setting-row">
+                <span>Text Size:</span>
+                <div>
+                    <button class="btn-action" onclick="zoom(2)">+</button>
+                    <button class="btn-action" onclick="zoom(-2)">-</button>
+                </div>
+            </div>
+            <p style="font-size: 11px; margin-top: 20px; opacity: 0.5;">Settings are applied globally.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

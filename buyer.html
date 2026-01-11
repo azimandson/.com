@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer List</title>
+    <style>
+        :root {
+            --primary-color: #ff00ea;
+            --text-color: #333;
+            --glass-bg: rgba(255, 255, 255, 0.8);
+        }
+
+        /* ব্যাকগ্রাউন্ড স্টাইল */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 3D রেইনবো ব্যানার */
+        .banner {
+            width: 100%;
+            padding: 50px 0;
+            background: linear-gradient(90deg, #ff00ea, #00d2ff, #72ff00, #ffb300, #ff00ea);
+            background-size: 400% 400%;
+            animation: gradient-anim 10s ease infinite;
+            color: white;
+            text-align: center;
+            font-size: 35px;
+            font-weight: 900;
+            text-transform: uppercase;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            border-bottom: 5px solid rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes gradient-anim {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* আপডেট করা নেভিগেশন বার */
+        nav {
+            display: flex;
+            justify-content: center;
+            /* আইটেমগুলো মাঝখানে থাকবে */
+            gap: 40px;
+            /* আইটেমগুলোর মাঝের ফাঁকা জায়গা */
+            padding: 15px 30px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            margin-top: -30px;
+            /* ব্যানারের ওপর আংশিক উঠে থাকবে */
+            width: 60%;
+            /* দুই পাশ থেকে জায়গা কমানোর জন্য width কমানো হয়েছে */
+            max-width: 600px;
+            border-radius: 50px;
+            position: sticky;
+            top: 20px;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 800;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+            transform: scale(1.1);
+        }
+
+        .title-text {
+            margin: 60px 0 30px 0;
+            font-size: 28px;
+            color: #444;
+            background: #fff;
+            padding: 10px 40px;
+            border-radius: 50px;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        /* বায়ার লিস্ট */
+        .buyer-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 90%;
+            max-width: 400px;
+            padding-bottom: 50px;
+        }
+
+        .buyer-card {
+            text-decoration: none;
+            display: block;
+            padding: 20px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            border-radius: 15px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 3D Colors */
+        .bonprix {
+            background: linear-gradient(145deg, #ff5eb3, #e60073);
+            box-shadow: 0 8px 0 #b30059;
+        }
+
+        .otto {
+            background: linear-gradient(145deg, #ffdf5e, #ffb300);
+            box-shadow: 0 8px 0 #cc8f00;
+        }
+
+        .kgs {
+            background: linear-gradient(145deg, #a35eff, #6f00ff);
+            box-shadow: 0 8px 0 #5200bd;
+        }
+
+        .witt {
+            background: linear-gradient(145deg, #5efff1, #00d4c1);
+            box-shadow: 0 8px 0 #00a192;
+        }
+
+        .buyer-card:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.1);
+        }
+
+        .buyer-card:active {
+            transform: translateY(5px);
+            box-shadow: 0 2px 0 #555;
+        }
+
+        .buyer-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.5s;
+        }
+
+        .buyer-card:hover::after {
+            left: 100%;
+        }
+    </style>
+</head>
+
+
+
+
+
+
+
+
+<body>
+
+    <div class="banner">
+        AZIM AND SON PVT. LTD.
+    </div>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="#bio"> </a>
+        <a href="#staff"> </a>
+        <a href="index.html">BACK</a>
+    </nav>
+
+    <div class="title-text">OUR BUYER</div>
+
+    <div class="buyer-list">
+        <a href="/RECIPE/bonprix.html" target="_blank" class="buyer-card bonprix">Bonprix</a>
+        <a href="/RECIPE/otto.html" target="_blank" class="buyer-card otto">Otto</a>
+        <a href="/RECIPE/kgs.html" target="_blank" class="buyer-card kgs">KGS</a>
+        <a href="/RECIPE/witt.html" target="_blank" class="buyer-card witt">Witt</a>
+    </div>
+
+</body>
+
+</html>
